@@ -1,4 +1,4 @@
-# 📚 Groene Serie — Title to URL Mapper
+# 📚 Title to URL Scraper Selenium
 
 Automated tool that reads legal document titles from an Excel file and finds their exact URLs on [inview.nl](https://www.inview.nl) using Selenium. Supports **resume on restart**, **CAPTCHA detection**, and **crash-safe progress saving**.
 
