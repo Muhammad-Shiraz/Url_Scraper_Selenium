@@ -77,7 +77,7 @@ Your Excel file must have a column named **`primary_title`** containing the titl
 ## 🚀 How to Run
 
 ```bash
-cd d:\Legsiys\Title_to_link
+cd d:\Your folder
 python app.py
 ```
 
@@ -176,7 +176,3 @@ For each title the script:
 - To start completely fresh, delete `progress.json` before running
 
 ---
-
-## 📄 License
-
-Internal tool — Legsiys.
