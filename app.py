@@ -103,12 +103,6 @@ def wait_for_login(driver):
         time.sleep(2)
 
 
-# ────────────────────────────────────────────────────────────
-# CORE SEARCH
-# returns: [url]  → matched
-#          []     → no match found
-#          None   → hard error (captcha timeout / crash)
-# ────────────────────────────────────────────────────────────
 def search_title(driver, title):
     slug = title_to_slug(title)
     print(f"  Slug : {slug}")
@@ -215,16 +209,6 @@ def search_title(driver, title):
     return []
 
 
-# ────────────────────────────────────────────────────────────
-# PROGRESS  — keyed by document_id (string)
-#
-# Each entry stored in progress.json:
-#   {
-#     "document_id": "8539994",
-#     "title":       "Groene Serie ...",
-#     "urls":        ["https://..."] | [] | null
-#   }
-# ────────────────────────────────────────────────────────────
 def load_progress():
     """Returns dict[document_id -> entry_dict]."""
     if not os.path.exists(PROGRESS_FILE):
