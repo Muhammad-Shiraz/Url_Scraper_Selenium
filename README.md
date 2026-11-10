@@ -1,6 +1,6 @@
 # 📚 Title to URL Scraper Selenium
 
-Automated tool that reads legal document titles from an Excel file and finds their exact URLs on [inview.nl](https://www.inview.nl) using Selenium. Supports **resume on restart**, **CAPTCHA detection**, and **crash-safe progress saving**.
+Automated tool that reads legal document titles from an Excel file and finds their exact URLs on [websites]) using Selenium. Supports **resume on restart**, **CAPTCHA detection**, and **crash-safe progress saving**.
 
 ---
 
@@ -84,11 +84,11 @@ python app.py
 ### What happens step by step:
 
 1. **Progress loaded** — any titles already in `progress.json` are skipped automatically
-2. **Chrome opens** — the browser navigates to inview.nl
+2. **Chrome opens** — the browser navigates to website
 3. **Waiting for login** — the terminal shows:
    ```
    ============================================================
-     Opening inview.nl — please:
+     Opening example.com — please:
      1. Accept the cookie banner
      2. Log in if prompted
      The script will continue automatically once logged in.
@@ -119,7 +119,7 @@ The result Excel file has 3 columns:
 
 | # | Title | URL |
 |---|---|---|
-| 1 | Groene Serie ... Artikel 225 | `https://www.inview.nl/document/...` |
+| 1 | Groene Serie ... Artikel 225 | `https://www.....com/document/...` |
 | 2 | Groene Serie ... Artikel 224 | NO MATCH |
 | 3 | Groene Serie ... Artikel 223 | SKIPPED |
 
@@ -159,7 +159,7 @@ ValueError: Column 'primary_title' not found. Available: ['Title', ...]
 ## 🔧 How the Search Works
 
 For each title the script:
-1. Navigates to `https://www.inview.nl/zoeken`
+1. Navigates to `https://www.example.nl/search`
 2. Fills the search box instantly via JavaScript
 3. Clicks the search button (falls back to `ENTER` if button not found)
 4. Waits for the `Commentaar` result cluster to appear
